@@ -1,0 +1,474 @@
+/* 1) Body can remain simple (remove fixed width/height if you want it truly centered) */
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF;
+    font-family: Arial, sans-serif;
+    /* We removed the fixed width & height here so the page can scale if needed. */
+    position: relative;
+    min-height: 100vh; /* ensures full screen height */
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  /* 2) A wrapper that is exactly your Figma size, centered in the screen */
+  .page-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1745px;  /* from your Figma */
+    height: 877px;  /* from your Figma */
+    transform: translate(-50%, -50%);
+    /* The background is optional here if you want a bounding box color:
+       background: #FFFFFF; */
+  }
+  
+  /* 3) The Heading (increase top to add more space above box) */
+  .pixel-text {
+    position: absolute;
+    left: 267px;
+    /* Adjust this top to give more space between heading & box */
+    top: 150px; /* for example, was 201px before. Lower = further up the page. */
+  
+    width: 1210px;
+    height: 77px;
+    font-family: 'Pixelify Sans', Arial, sans-serif;
+    font-size: 64px;
+    line-height: 77px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0; 
+  }
+  
+  /* 4) The Chocolate Box (leave left, top as is OR shift if you want even more space) */
+  .chocolate-box {
+    position: absolute;
+    left: 345px;
+    top: 305px;
+    width: 1070px;
+    height: 267px;
+    background: url("assets/chocobox.png") no-repeat;
+    background-size: cover;
+  }
+  
+  /* 5) Individual Chocolates (same as you had; no change needed) */
+  .milk {
+    position: absolute;
+    width: 222px;
+    height: 222px;
+    left: 451px;
+    top: 328px;
+    background: url("assets/milk.png") no-repeat center;
+    background-size: cover;
+  }
+  
+  .white {
+    position: absolute;
+    width: 222px;
+    height: 222px;
+    left: 769px;
+    top: 328px;
+    background: url("assets/white.png") no-repeat center;
+    background-size: cover;
+  }
+  
+  .dubai {
+    position: absolute;
+    width: 222px;
+    height: 222px;
+    left: 1071px;
+    top: 328px;
+    background: url("assets/dubai.png") no-repeat center;
+    background-size: cover;
+  }
+  
+  /* Position the milk-text absolutely near the Milk chocolate 
+     (or use another approach if you prefer). */
+  .milk-text {
+
+    position: absolute;
+    width: 735px;
+    height: 231px;
+    left: 774px;
+    top: 323px;
+
+    font-family: 'Pixelify Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+
+    color: #000000;
+
+
+  }
+
+  /* New class for the bitten chocolate */
+ .milk-bite {
+    position: absolute;
+    width: 222px;
+    height: 222px;
+    left: 451px;
+    top: 328px;
+    background: url("assets/milk-1.png") no-repeat center;
+    background-size: cover;
+  }
+
+  /* The text block for the second “Om nom nom” message */
+.milk-text2 {
+
+    position: absolute;
+    width: 735px;
+    height: 231px;
+    left: 774px;
+    top: 323px;
+
+    font-family: 'Pixelify Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+
+    color: #000000;
+
+
+  }
+
+.milk-text3 {
+    /* Om nom nom nom... Yummy! Let’s take another one... */
+
+    position: absolute;
+    width: 735px;
+    height: 231px;
+    left: 774px;
+    top: 323px;
+
+    font-family: 'Pixelify Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+
+    color: #000000;
+
+
+}
+
+.milk-bite2 {
+    position: absolute;
+    width: 222px;
+    height: 222px;
+    left: 451px;
+    top: 328px;
+    background: url("assets/milk-2.png") no-repeat center;
+    background-size: cover;
+}
+
+.milk-letter1 {
+    position: absolute;
+    left: 800px;
+    top: 350px;  
+    width: 735px; 
+    font-size: 43px;
+    line-height: 1.2;
+
+    font-family: 'Pixelify Sans', Arial, sans-serif;
+    color: #000;
+}
+
+.milk-letter2 {
+    position: absolute;
+    left: 800px;
+    top: 630px;  
+    width: 859px; 
+    font-size: 40px;
+    line-height: 1.2;
+
+    font-family: 'Pixelify Sans', Arial, sans-serif;
+    color: #000;
+}
+
+.milk-env {
+    position: absolute;
+    width: 222px;
+    height: 222px;
+    left: 451px;
+    top: 328px;
+    background: url("assets/env-closed.png") no-repeat center;
+    background-size: cover;
+}
+
+.white {
+    position: absolute;
+    width: 222px;
+    height: 222px;
+    left: 769px;
+    top: 328px;
+    background: url("assets/white.png") no-repeat center;
+    background-size: cover;
+  }
+  
+  .white-bite {
+    position: absolute; /* same position so it doesn't jump */
+    width: 222px;
+    height: 222px;
+    left: 769px;
+    top: 328px;
+    background: url("assets/white-1.png") no-repeat center;
+    background-size: cover;
+  }
+
+  .white-bite2 {
+    position: absolute; /* same position so it doesn't jump */
+    width: 222px;
+    height: 222px;
+    left: 769px;
+    top: 328px;
+    background: url("assets/white-2.png") no-repeat center;
+    background-size: cover;
+  }
+
+  .white-text {
+    /* Oh! Is that strawberry filling? Let’s take another bite! */
+
+    position: absolute;
+    width: 986px;
+    height: 154px;
+    left: calc(50% - 986px/2 + 0.5px);
+    top: 608px;
+
+    font-family: 'Pixelify Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: center;
+
+    color: #000000;
+
+  }
+
+  .white-text2 {
+
+    position: absolute;
+    width: 986px;
+    height: 154px;
+    left: calc(50% - 986px/2 + 0.5px);
+    top: 608px;
+
+    font-family: 'Pixelify Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: center;
+
+    color: #000000;
+
+  }
+
+  .white-text3 {
+
+    position: absolute;
+    width: 986px;
+    height: 154px;
+    left: calc(50% - 986px/2 + 0.5px);
+    top: 608px;
+
+    font-family: 'Pixelify Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: center;
+
+    color: #000000;
+
+  }
+
+  .white-joint-text {
+
+    position: absolute;
+    width: 986px;
+    height: 154px;
+    left: calc(50% - 986px/2 + 0.5px);
+    top: 608px;
+
+    font-family: 'Pixelify Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: center;
+
+    color: #000000;
+
+  }
+
+  .joint {
+    position: absolute;
+    width: 222px;
+    height: 222px;
+    left: 769px;
+    top: 328px;
+    background: url("assets/joint.png") no-repeat center;
+    background-size: cover;
+  }
+  
+  .dubai {
+    position: absolute;
+    width: 222px;
+    height: 222px;
+    left: 1071px; /* or wherever you put it */
+    top: 328px;
+    background: url("assets/dubai.png") no-repeat center;
+    background-size: cover;
+  }
+  
+  .dubai-bite {
+    position: absolute;
+    /* same coords/size */
+    width: 222px;
+    height: 222px;
+    left: 1071px;
+    top: 328px;
+    background: url("assets/dubai-1.png") no-repeat center;
+    background-size: cover;
+  }
+
+  .dubai-bite2 {
+    position: absolute;
+    /* same coords/size */
+    width: 222px;
+    height: 222px;
+    left: 1071px;
+    top: 328px;
+    background: url("assets/dubai-2.png") no-repeat center;
+    background-size: cover;
+  }
+
+  .dubai-text {
+
+    position: absolute;
+    width: 848px;
+    height: 231px;
+    left: 160px;
+    top: 323px;
+
+    font-family: 'Pixelify Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: right;
+
+    color: #000000;
+
+  }
+
+  .dubai-text2 {
+    position: absolute;
+    width: 848px;
+    height: 231px;
+    left: 160px;
+    top: 323px;
+
+    font-family: 'Pixelify Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: right;
+
+    color: #000000;
+  }
+
+  .dubai-text3 {
+    position: absolute;
+    width: 848px;
+    height: 231px;
+    left: 160px;
+    top: 323px;
+
+    font-family: 'Pixelify Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: right;
+
+    color: #000000;
+  }
+
+  .dubai-pic-1 {
+
+    position: absolute;
+    width: 943px;
+    height: 231px;
+    left: 65px;
+    top: 323px;
+
+    font-family: 'Pixelify Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: right;
+
+    color: #000000;
+
+  }
+
+  .dubaipic {
+
+    position: absolute;
+    width: 450px;
+    height: 600px;
+    left: 1068px;
+    top: 139px;
+
+    background: url('assets/dubaiPic.jpg');
+    background-size: contain;
+
+  }
+
+  .pixel-footer {
+    position: absolute;
+    /* If .page-wrapper is 877px tall, let's place it near the bottom */
+    bottom: 20px; /* 20px above bottom edge, tweak as needed */
+    width: 100%;  /* so it spans the entire width of .page-wrapper */
+  
+    /* Center the text horizontally */
+    text-align: center;
+  }
+  
+  .pixel-footer p {
+    margin: 0; 
+    /* Use your pixel font (if loaded via Google Fonts or @font-face) */
+    font-family: 'Pixelify Sans', Arial, sans-serif;
+    font-size: 32px; /* or 64px, if you want it bigger like your main text */
+    line-height: 1.2;
+    color: #000000;
+    z-index: 10000; /* So it sits above other elements if needed */
+  }
+
+  .footer-msg .center-content{
+    position: absolute;  /* covers the entire viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1050px;
+  
+    /* Center your text horizontally & vertically */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    /* Use your pixel font */
+    font-family: 'Pixelify Sans', Arial, sans-serif;
+    font-size: 50px;   /* or bigger if you like */
+    text-align: center;
+    color: #000;
+  }
